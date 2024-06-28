@@ -1,0 +1,27 @@
+[alias]
+        st = status
+        ci = commit
+        co = checkout
+        br = branch
+        ml = log --oneline --graph
+        mla = log --oneline --graph --all
+        mlaf = !git --no-pager log --oneline --decorate --graph --all >>
+        fush = push --force-with-lease
+        wl = worktree list
+        wa = worktree add
+        wr = worktree remove
+
+[core]
+        editor = vi
+
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+
+[init]
+        defaultBranch = main
+
+[diff]
+        tool = vimdiff
