@@ -11,8 +11,12 @@
         wa = worktree add
         wr = worktree remove
 
+[user]
+	email = contact@filipeschenkel.xyz
+	name = Filipe Schenkel
+
 [core]
-        editor = vi
+        editor = vim
 
 [filter "lfs"]
         clean = git-lfs clean -- %f
