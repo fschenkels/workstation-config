@@ -3,17 +3,19 @@
         ci = commit
         co = checkout
         br = branch
+        fush = push --force-with-lease
+        upd = !git add . && git commit -m "update"
+        upp = !git add . && git commit -m "update" && git push
         ml = log --oneline --graph
         mla = log --oneline --graph --all
         mlaf = !git --no-pager log --oneline --decorate --graph --all >>
-        fush = push --force-with-lease
         wl = worktree list
         wa = worktree add
         wr = worktree remove
 
 [user]
-	email = contact@filipeschenkel.xyz
-	name = Filipe Schenkel
+        email = sfschenkel@gmail.com
+        name = Filipe Schenkel
 
 [core]
         editor = vim
