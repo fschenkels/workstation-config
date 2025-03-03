@@ -1,0 +1,27 @@
+import sys
+from prettytable import PrettyTable
+
+if __name__ == "__main__":
+    aliases = sys.stdin.read()
+
+    table = PrettyTable([
+        "Command",
+        "Usage",
+        "Path",
+    ])
+
+    for alias in aliases.strip().split("\n"):
+
+        command_and_path_usage = alias.split("=")
+        path_and_usage = command_and_path_usage[1].split("alias-venv: ")
+
+        command = command_and_path_usage[0].replace("alias ", "")
+        path = path_and_usage[0].replace("\"", "").replace(" #", "")
+
+        table.add_row([
+            command,
+            path_and_usage[1],
+            path,
+        ])
+
+    print(table)
