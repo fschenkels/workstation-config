@@ -29,6 +29,8 @@ def render_table(commands_and_usages):
     return table
 
 if __name__ == "__main__":
+"""Parses lines containing # custom-alias (category): usage description"""
+
     aliases = sys.stdin.read()
 
     parsed_aliases = dict()
